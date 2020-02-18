@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="card">
+    <h2><%= @article.title %> (<%= link_to "edit", edit_path(@article) %>)</h2>
+    <p><%= @article.content %></p>
+    <p><%= link_to "back", articles_path %>
+    <p><%= link_to "DELETE", article_path(@article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+  </div>
+</div>
